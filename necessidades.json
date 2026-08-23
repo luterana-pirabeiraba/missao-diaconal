@@ -1,0 +1,25 @@
+{
+  "atualizadoEm": "2026-08-21",
+  "itens": [
+    {
+      "titulo": "Roupas de inverno",
+      "descricao": "Casacos, blusas de frio e cobertores em bom estado, para adulto e infantil.",
+      "urgente": true
+    },
+    {
+      "titulo": "Sapatos e calçados",
+      "descricao": "Todos os tamanhos são bem-vindos, especialmente numeração infantil.",
+      "urgente": false
+    },
+    {
+      "titulo": "Louças e utensílios de cozinha",
+      "descricao": "Panelas, pratos, copos e talheres em condições de uso.",
+      "urgente": false
+    },
+    {
+      "titulo": "Voluntários para triagem",
+      "descricao": "Ajuda para organizar e separar as doações nas terças-feiras.",
+      "urgente": true
+    }
+  ]
+}

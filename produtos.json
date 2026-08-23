@@ -1,0 +1,48 @@
+{
+  "_observacao": "Itens de exemplo (mock) para a vitrine 'O que temos'. Preços e peças são fictícios até serem substituídos pelos dados reais da missão diaconal.",
+  "atualizadoEm": "2026-08-21",
+  "itens": [
+    {
+      "nome": "Camisa casual",
+      "tamanho": "M",
+      "estado": "Bom estado",
+      "preco": "R$ 30,00",
+      "icone": "camisa"
+    },
+    {
+      "nome": "Camiseta",
+      "tamanho": "G",
+      "estado": "Bom estado",
+      "preco": "R$ 20,00",
+      "icone": "camiseta"
+    },
+    {
+      "nome": "Calça jeans",
+      "tamanho": "40",
+      "estado": "Seminova",
+      "preco": "R$ 40,00",
+      "icone": "calca"
+    },
+    {
+      "nome": "Vestido",
+      "tamanho": "P",
+      "estado": "Bom estado",
+      "preco": "R$ 35,00",
+      "icone": "vestido"
+    },
+    {
+      "nome": "Jaqueta",
+      "tamanho": "M",
+      "estado": "Seminova",
+      "preco": "R$ 50,00",
+      "icone": "jaqueta"
+    },
+    {
+      "nome": "Blusa",
+      "tamanho": "P",
+      "estado": "Bom estado",
+      "preco": "R$ 25,00",
+      "icone": "blusa"
+    }
+  ]
+}
