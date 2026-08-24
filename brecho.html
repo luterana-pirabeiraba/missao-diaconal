@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brechó Solidário — Missão Diaconal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand-block">
+      <a href="index.html" class="brand">Missão Diaconal</a>
+      <span class="brand-sub">Igreja Luterana Pirabeiraba</span>
+    </div>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="brecho.html" aria-current="page">Brechó</a>
+      <a href="index.html#fotos">Fotos</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="ajudar.html">Quero ajudar</a>
+    </nav>
+
+    <div class="header-logos" aria-hidden="true">
+      <span class="logo-slot">Logo Igreja</span>
+      <span class="logo-slot">Logo Missão Diaconal</span>
+    </div>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero hero-small">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Missão Diaconal</p>
+    <h1>Brechó Solidário</h1>
+    <p class="hero-lede">De tempos em tempos, abrimos o brechó com peças em bom estado a preços simbólicos. Toda a renda apoia a Missão Diaconal. Acompanhe o Instagram para saber as próximas datas.</p>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <section class="vitrine-section" id="vitrine">
+    <h2 class="section-label">O que temos</h2>
+    <p class="section-lede">Conheça algumas das peças que temos disponíveis em destaque.</p>
+    <div id="vitrine-grid" class="vitrine-grid" aria-live="polite">
+      <p>Carregando peças...</p>
+    </div>
+    <p class="vitrine-note">Preços e peças são exemplos e podem ser atualizados pela equipe da missão diaconal.</p>
+  </section>
+
+  <section class="needs-section">
+    <h2 class="section-label">O que está fazendo falta</h2>
+    <p class="section-lede">Necessidades atualizadas pela instituição.</p>
+    <div id="needs-list" class="tags-grid" aria-live="polite">
+      <p>Carregando lista de necessidades...</p>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="cta-band-inner">
+      <h2>Quer ajudar?</h2>
+      <p>Você pode doar roupas em bom estado ou saber mais sobre a Missão Diaconal da Igreja Luterana de Pirabeiraba.</p>
+      <a href="ajudar.html" class="btn btn-outline">Sim! Quero saber onde doar!</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand">Missão Diaconal</span>
+        <p>Igreja Luterana de Pirabeiraba</p>
+      </div>
+      <nav class="footer-nav" aria-label="Links do rodapé">
+        <a href="index.html">Início</a>
+        <a href="brecho.html">Brechó</a>
+        <a href="index.html#fotos">Fotos</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="ajudar.html">Quero ajudar</a>
+      </nav>
+      <div class="footer-logos" aria-hidden="true">
+        <span class="footer-logo-slot">Logo Igreja Luterana de Pirabeiraba</span>
+        <span class="footer-logo-slot">Logo Missão Diaconal</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Igreja Luterana Pirabeiraba · Joinville/SC</span>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Fechar">&times;</button>
+    <h3 id="modal-title"></h3>
+    <p class="product-meta" id="modal-meta"></p>
+    <p class="product-price" id="modal-price"></p>
+    <p class="modal-contact">Para saber mais sobre esta peça, entre em contato conosco.</p>
+    <a href="ajudar.html" class="btn btn-outline">Falar com a gente</a>
+  </div>
+</div>
+
+<script src="js/main.js" defer></script>
+<script src="js/vitrine.js" defer></script>
+</body>
+</html>
