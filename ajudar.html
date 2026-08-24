@@ -3,122 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Missão Diaconal — Brechó Solidário</title>
+<title>Missão Diaconal — Brechó Missão Diaconal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --white: #FFFFFF;
-  --black: #111111;
-  --beige: #EDE5D8;
-  --beige-deep: #DCC9A3;
-  --line: rgba(17,17,17,0.14);
-  --font-display: "Fraunces", serif;
-  --font-body: "Work Sans", sans-serif;
-}
-*{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; }
-body{
-  margin:0;
-  background: var(--white);
-  color: var(--black);
-  font-family: var(--font-body);
-  line-height: 1.5;
-}
-a{ color: inherit; }
-.wrap{ max-width: 960px; margin: 0 auto; padding: 0 24px; }
-:focus-visible{ outline: 2px solid var(--black); outline-offset: 3px; }
-
-/* ---------- Header (igual ao index.html) ---------- */
-.site-header{ border-bottom: 1px solid var(--line); position: sticky; top:0; background: var(--white); z-index: 40; }
-.header-inner{ display:flex; align-items:center; justify-content: space-between; gap: 20px; padding: 18px 24px; position: relative; }
-.brand-block{ display:flex; align-items:baseline; gap: 12px; flex-wrap: wrap; }
-.brand{ font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; text-decoration:none; }
-.brand-sub{ font-size: 0.82rem; color: rgba(17,17,17,0.6); }
-.main-nav{ display:flex; align-items:center; gap: 28px; }
-.main-nav a{ font-size: 0.92rem; text-decoration:none; font-weight: 500; }
-.main-nav a:hover{ text-decoration: underline; }
-.main-nav a[aria-current="page"]{ text-decoration: underline; }
-.header-logos{ display:flex; align-items:center; gap: 10px; }
-.logo-slot{
-  width: 34px; height: 34px; border: 1px dashed rgba(17,17,17,0.35); border-radius: 50%;
-  display:flex; align-items:center; justify-content:center; font-size: 0.5rem; line-height: 1.1;
-  text-align:center; color: rgba(17,17,17,0.45); padding: 2px; flex-shrink: 0;
-}
-.menu-toggle{ display:none; background:none; border: 1px solid var(--black); border-radius: 2px; width: 40px; height: 36px; cursor:pointer; align-items:center; justify-content:center; }
-.menu-toggle span, .menu-toggle span::before, .menu-toggle span::after{ content:""; display:block; width: 18px; height: 2px; background: var(--black); position:relative; }
-.menu-toggle span::before{ position:absolute; top:-6px; }
-.menu-toggle span::after{ position:absolute; top:6px; }
-@media (max-width: 720px){
-  .main-nav{ position: absolute; top: 100%; left:0; right:0; background: var(--white); border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; gap: 0; padding: 8px 24px 18px; display:none; }
-  .main-nav.open{ display:flex; }
-  .main-nav a{ padding: 10px 0; width:100%; }
-  .menu-toggle{ display:flex; }
-  .header-logos{ display:none; }
-}
-
-/* ---------- Hero ---------- */
-.hero{ background: var(--beige); padding: 48px 0 40px; }
-.hero-inner{ max-width: 640px; }
-.eyebrow{ font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(17,17,17,0.65); margin: 0 0 18px; }
-.hero h1{ font-family: var(--font-display); font-weight: 600; font-size: clamp(2rem, 4.5vw, 2.9rem); line-height: 1.15; margin: 0 0 12px; }
-.hero-sub{ font-family: var(--font-display); font-size: 1.1rem; color: rgba(17,17,17,0.75); margin: 0 0 16px; }
-.hero-lede{ font-size: 1.02rem; max-width: 52ch; color: rgba(17,17,17,0.78); margin: 0; }
-
-/* ---------- Section shared ---------- */
-.section{ padding: 48px 0; }
-.section-label{ font-family: var(--font-display); font-weight: 600; font-size: 1.6rem; margin: 0 0 6px; }
-.section-lede{ color: rgba(17,17,17,0.6); margin: 0 0 28px; }
-
-/* ---------- Info institucional ---------- */
-.info-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-.info-card{ position: relative; background: var(--beige); border-radius: 4px; padding: 26px 22px; }
-.info-card h2{ font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; margin: 0 0 6px; }
-.tag-hole{ position:absolute; top: 18px; right: 18px; width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid var(--black); }
-.info-card p{ margin:0; color: rgba(17,17,17,0.78); }
-.info-card a{ text-decoration: underline; }
-.info-placeholder{ font-style: italic; color: rgba(17,17,17,0.5); }
-
-/* ---------- Necessidades ---------- */
-.tags-grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 20px; }
-.tag-card{ position: relative; background: var(--white); border: 1px solid var(--line); border-radius: 3px 12px 12px 3px; padding: 22px 20px 20px 30px; }
-.tag-card::before{ content:""; position:absolute; left: 12px; top: 22px; width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid var(--black); background: var(--white); }
-.tag-card::after{ content:""; position:absolute; left: 0; top: 0; bottom: 0; width: 1px; background: repeating-linear-gradient(to bottom, var(--line) 0 4px, transparent 4px 8px); }
-.tag-urgent{ display:inline-block; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--black); background: var(--beige-deep); padding: 3px 9px; border-radius: 2px; margin-bottom: 10px; }
-.tag-card h3{ font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; margin: 0 0 6px; }
-.tag-card p{ font-size: 0.9rem; color: rgba(17,17,17,0.72); margin: 0; }
-
-/* ---------- Mapa ---------- */
-.map-frame{ width: 100%; height: 340px; border-radius: 4px; overflow: hidden; border: 1px solid var(--line); margin-bottom: 18px; }
-.map-actions{ display:flex; gap: 14px; flex-wrap: wrap; }
-.btn{ display:inline-block; font-family: var(--font-body); font-weight: 600; font-size: 0.95rem; padding: 13px 26px; border-radius: 2px; text-decoration:none; border: 1px solid var(--black); transition: background 0.2s ease, color 0.2s ease; }
-.btn-outline{ background: transparent; color: var(--black); }
-.btn-outline:hover{ background: var(--black); color: var(--white); }
-.btn-primary{ background: var(--black); color: var(--white); }
-.btn-primary:hover{ background: #322f2b; }
-
-.back-link{ display:inline-block; margin-top: 4px; }
-
-/* ---------- Footer (igual ao index.html) ---------- */
-.site-footer{ border-top: 1px solid var(--line); padding: 40px 0 28px; }
-.footer-top{ display:flex; flex-wrap:wrap; justify-content: space-between; gap: 28px; margin-bottom: 24px; }
-.footer-brand .brand{ display:block; margin-bottom: 4px; }
-.footer-brand p{ margin:0; font-size: 0.85rem; color: rgba(17,17,17,0.6); }
-.footer-nav{ display:flex; flex-direction:column; gap: 8px; }
-.footer-nav a{ font-size: 0.9rem; text-decoration:none; }
-.footer-nav a:hover{ text-decoration:underline; }
-.footer-logos{ display:flex; gap: 14px; align-items:center; }
-.footer-logo-slot{ width: 96px; height: 56px; border: 1px dashed rgba(17,17,17,0.35); border-radius: 4px; display:flex; align-items:center; justify-content:center; text-align:center; font-size: 0.68rem; color: rgba(17,17,17,0.5); padding: 6px; }
-.footer-bottom{ border-top: 1px solid var(--line); padding-top: 18px; font-size: 0.8rem; color: rgba(17,17,17,0.5); display:flex; flex-wrap:wrap; justify-content: space-between; gap: 8px; }
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap header-inner">
     <div class="brand-block">
-      <a href="index.html" class="brand">Brechó Solidário</a>
+      <a href="index.html" class="brand">Brechó Missão Diaconal</a>
       <span class="brand-sub">Igreja Luterana Pirabeiraba · Missão Diaconal</span>
     </div>
 
@@ -126,6 +22,7 @@ a{ color: inherit; }
       <a href="index.html">Início</a>
       <a href="index.html#vitrine">O que temos</a>
       <a href="ajudar.html" aria-current="page">Quero ajudar</a>
+      <a href="index.html#fotos">Fotos</a>
       <a href="index.html#sobre">Sobre</a>
     </nav>
 
@@ -140,7 +37,7 @@ a{ color: inherit; }
   </div>
 </header>
 
-<section class="hero">
+<section class="hero hero-small">
   <div class="wrap hero-inner">
     <p class="eyebrow">Venha até nós</p>
     <h1>Missão Diaconal</h1>
@@ -222,13 +119,14 @@ a{ color: inherit; }
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <span class="brand">Brechó Solidário</span>
+        <span class="brand">Brechó Missão Diaconal</span>
         <p>Igreja Luterana de Pirabeiraba<br>Missão Diaconal</p>
       </div>
       <nav class="footer-nav" aria-label="Links do rodapé">
         <a href="index.html">Início</a>
         <a href="index.html#vitrine">O que temos</a>
         <a href="ajudar.html">Quero ajudar</a>
+        <a href="index.html#fotos">Fotos</a>
         <a href="index.html#sobre">Sobre</a>
       </nav>
       <div class="footer-logos" aria-hidden="true">
@@ -242,47 +140,6 @@ a{ color: inherit; }
   </div>
 </footer>
 
-<script>
-const menuToggle = document.getElementById('menu-toggle');
-const mainNav = document.getElementById('main-nav');
-menuToggle.addEventListener('click', () => {
-  const isOpen = mainNav.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', String(isOpen));
-});
-mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  mainNav.classList.remove('open');
-  menuToggle.setAttribute('aria-expanded', 'false');
-}));
-
-async function carregarNecessidades() {
-  const container = document.getElementById('needs-list');
-  if (!container) return;
-
-  try {
-    const resposta = await fetch('necessidades.json');
-    const dados = await resposta.json();
-
-    if (!dados.itens || dados.itens.length === 0) {
-      container.innerHTML = '<p>Nenhuma necessidade cadastrada no momento.</p>';
-      return;
-    }
-
-    container.innerHTML = dados.itens.map(item => `
-      <div class="tag-card">
-        ${item.urgente ? '<span class="tag-urgent">Urgente</span>' : ''}
-        <h3>${item.titulo}</h3>
-        <p>${item.descricao}</p>
-      </div>
-    `).join('');
-
-  } catch (erro) {
-    container.innerHTML = '<p>Não foi possível carregar a lista agora. Se você abriu este arquivo diretamente (duplo clique), isso é esperado — funciona normalmente quando o site está publicado (ex: GitHub Pages).</p>';
-    console.error('Erro ao carregar necessidades.json:', erro);
-  }
-}
-
-document.addEventListener('DOMContentLoaded', carregarNecessidades);
-</script>
-
+<script src="js/main.js" defer></script>
 </body>
 </html>

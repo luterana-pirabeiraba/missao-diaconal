@@ -1,0 +1,251 @@
+/* ===========================================================
+   ESTILO DO SITE — Brechó Solidário / Missão Diaconal
+   Este arquivo controla a aparência das DUAS páginas
+   (index.html e ajudar.html). Editar aqui muda o site inteiro.
+   =========================================================== */
+
+/* ---------- Cores e fontes (mude aqui para trocar a paleta) ---------- */
+:root{
+  --white: #FFFFFF;
+  --black: #111111;
+  --beige: #EDE5D8;
+  --beige-deep: #DCC9A3;
+  --line: rgba(17,17,17,0.14);
+  --font-display: "Fraunces", serif;
+  --font-body: "Work Sans", sans-serif;
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin:0;
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+a{ color: inherit; }
+img{ max-width: 100%; display:block; }
+.wrap{ max-width: 960px; margin: 0 auto; padding: 0 24px; }
+:focus-visible{ outline: 2px solid var(--black); outline-offset: 3px; }
+
+/* ---------- Cabeçalho (header) ---------- */
+.site-header{ border-bottom: 1px solid var(--line); position: sticky; top:0; background: var(--white); z-index: 40; }
+.header-inner{ display:flex; align-items:center; justify-content: space-between; gap: 20px; padding: 18px 24px; position: relative; }
+.brand-block{ display:flex; align-items:baseline; gap: 12px; flex-wrap: wrap; }
+.brand{ font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; text-decoration:none; }
+.brand-sub{ font-size: 0.82rem; color: rgba(17,17,17,0.6); }
+
+.main-nav{ display:flex; align-items:center; gap: 28px; }
+.main-nav a{ font-size: 0.92rem; text-decoration:none; font-weight: 500; }
+.main-nav a:hover{ text-decoration: underline; }
+.main-nav a[aria-current="page"]{ text-decoration: underline; }
+
+.header-logos{ display:flex; align-items:center; gap: 10px; }
+.logo-slot{
+  width: 34px; height: 34px;
+  border: 1px dashed rgba(17,17,17,0.35);
+  border-radius: 50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size: 0.5rem; line-height: 1.1; text-align:center;
+  color: rgba(17,17,17,0.45); padding: 2px; flex-shrink: 0;
+}
+/* Quando as logos reais existirem, troque o .logo-slot no HTML por:
+   <img src="assets/logo-igreja.png" alt="Logo Igreja Luterana de Pirabeiraba">
+   <img src="assets/logo-missao-diaconal.png" alt="Logo Missão Diaconal"> */
+
+.menu-toggle{
+  display:none;
+  background:none; border: 1px solid var(--black); border-radius: 2px;
+  width: 40px; height: 36px; cursor:pointer;
+  align-items:center; justify-content:center;
+}
+.menu-toggle span, .menu-toggle span::before, .menu-toggle span::after{
+  content:""; display:block; width: 18px; height: 2px; background: var(--black); position:relative;
+}
+.menu-toggle span::before{ position:absolute; top:-6px; }
+.menu-toggle span::after{ position:absolute; top:6px; }
+
+/* Menu vira "hambúrguer" em telas pequenas (celular) */
+@media (max-width: 720px){
+  .main-nav{
+    position: absolute; top: 100%; left:0; right:0;
+    background: var(--white); border-bottom: 1px solid var(--line);
+    flex-direction: column; align-items: flex-start; gap: 0;
+    padding: 8px 24px 18px; display:none;
+  }
+  .main-nav.open{ display:flex; }
+  .main-nav a{ padding: 10px 0; width:100%; }
+  .menu-toggle{ display:flex; }
+  .header-logos{ display:none; }
+}
+
+/* ---------- Hero (banner de topo) ---------- */
+.hero{ background: var(--beige); padding: 72px 0 64px; }
+.hero-small{ padding: 48px 0 40px; }
+.hero-inner{ max-width: 640px; }
+.eyebrow{
+  font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: rgba(17,17,17,0.65); margin: 0 0 18px;
+}
+.hero h1{
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(2rem, 4.5vw, 2.9rem); line-height: 1.15; margin: 0 0 20px;
+}
+.hero-sub{ font-family: var(--font-display); font-size: 1.1rem; color: rgba(17,17,17,0.75); margin: 0 0 16px; }
+.hero-lede{ font-size: 1.05rem; max-width: 52ch; color: rgba(17,17,17,0.78); margin: 0 0 28px; }
+.hero-actions{ display:flex; gap: 14px; flex-wrap: wrap; }
+
+/* ---------- Botões ---------- */
+.btn{
+  display:inline-block; font-family: var(--font-body); font-weight: 600; font-size: 0.95rem;
+  padding: 13px 26px; border-radius: 2px; text-decoration:none; border: 1px solid var(--black);
+  transition: background 0.2s ease, color 0.2s ease; cursor:pointer;
+}
+.btn-primary{ background: var(--black); color: var(--white); }
+.btn-primary:hover{ background: #322f2b; }
+.btn-outline{ background: transparent; color: var(--black); }
+.btn-outline:hover{ background: var(--black); color: var(--white); }
+
+/* ---------- Títulos de seção (usado nas duas páginas) ---------- */
+.section{ padding: 48px 0; }
+.section-label{ font-family: var(--font-display); font-weight: 600; font-size: 1.6rem; margin: 0 0 6px; }
+.section-lede{ color: rgba(17,17,17,0.6); margin: 0 0 32px; }
+
+/* ---------- Vitrine "O que temos" (index.html) ---------- */
+.vitrine-section{ padding: 64px 0 24px; }
+.vitrine-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 22px; }
+.product-card{
+  background: var(--white); border: 1px solid var(--line); border-radius: 6px;
+  overflow:hidden; display:flex; flex-direction:column;
+}
+.product-media{
+  background: var(--beige); aspect-ratio: 4 / 3;
+  display:flex; align-items:center; justify-content:center; color: rgba(17,17,17,0.55);
+}
+.product-media svg{ width: 56px; height: 56px; }
+.product-body{ padding: 16px 18px 18px; position:relative; }
+.product-body::before{
+  content:""; position:absolute; left: 18px; top: -9px; width: 9px; height: 9px;
+  border-radius: 50%; border: 1.5px solid var(--black); background: var(--white);
+}
+.product-name{ font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; margin: 6px 0 2px; }
+.product-meta{ font-size: 0.85rem; color: rgba(17,17,17,0.65); margin: 0 0 10px; }
+.product-footer{ display:flex; align-items:center; justify-content: space-between; gap: 10px; }
+.product-price{ font-weight: 600; }
+.link-btn{
+  background:none; border:none; font: inherit; font-weight: 600; font-size: 0.85rem;
+  text-decoration: underline; cursor:pointer; padding: 4px 0; color: var(--black);
+}
+.vitrine-note{ font-size: 0.85rem; color: rgba(17,17,17,0.55); margin: 24px 0 0; }
+
+/* ---------- Modal "Ver detalhes" (index.html) ---------- */
+.modal-overlay{
+  position: fixed; inset: 0; background: rgba(17,17,17,0.5);
+  display:none; align-items:center; justify-content:center; padding: 20px; z-index: 100;
+}
+.modal-overlay.open{ display:flex; }
+.modal-box{ background: var(--white); border-radius: 6px; max-width: 380px; width:100%; padding: 28px 26px; position:relative; }
+.modal-close{ position:absolute; top: 14px; right: 14px; background:none; border:none; font-size: 1.3rem; line-height:1; cursor:pointer; color: var(--black); }
+.modal-box h3{ font-family: var(--font-display); font-size: 1.3rem; margin: 6px 0 4px; }
+.modal-box .product-meta{ margin-bottom: 14px; }
+.modal-contact{ font-size: 0.9rem; color: rgba(17,17,17,0.7); margin-top: 14px; }
+
+/* ---------- Faixa de destaque "Quer ajudar?" (index.html) ---------- */
+.cta-band{ background: var(--beige); border-radius: 4px; margin: 56px 0; padding: 48px 40px; }
+.cta-band-inner{ max-width: 480px; }
+.cta-band h2{ font-family: var(--font-display); font-weight: 600; font-size: 1.6rem; margin: 0 0 10px; }
+.cta-band p{ color: rgba(17,17,17,0.75); margin: 0 0 22px; }
+
+/* ---------- "Como posso ajudar?" em 3 passos (index.html) ---------- */
+.steps-section{ padding: 24px 0 56px; }
+.steps-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 32px; margin-top: 28px; }
+.step-num{ font-family: var(--font-display); font-size: 2.4rem; font-weight: 600; color: var(--beige-deep); line-height:1; margin-bottom: 10px; }
+.step h3{ font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; margin: 0 0 6px; }
+.step p{ margin:0; color: rgba(17,17,17,0.72); font-size: 0.94rem; }
+
+/* ---------- Cartões de necessidade / info institucional (as duas páginas) ---------- */
+.needs-section{ padding: 8px 0 56px; }
+.tags-grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 20px; }
+.tag-card{
+  position: relative; background: var(--white); border: 1px solid var(--line);
+  border-radius: 3px 12px 12px 3px; padding: 22px 20px 20px 30px;
+}
+.tag-card::before{
+  content:""; position:absolute; left: 12px; top: 22px; width: 8px; height: 8px;
+  border-radius: 50%; border: 1.5px solid var(--black); background: var(--white);
+}
+.tag-card::after{
+  content:""; position:absolute; left: 0; top: 0; bottom: 0; width: 1px;
+  background: repeating-linear-gradient(to bottom, var(--line) 0 4px, transparent 4px 8px);
+}
+.tag-urgent{
+  display:inline-block; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--black); background: var(--beige-deep); padding: 3px 9px; border-radius: 2px; margin-bottom: 10px;
+}
+.tag-card h3{ font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; margin: 0 0 6px; }
+.tag-card p{ font-size: 0.9rem; color: rgba(17,17,17,0.72); margin: 0; }
+
+.info-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.info-card{ position: relative; background: var(--beige); border-radius: 4px; padding: 26px 22px; }
+.info-card h2{ font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; margin: 0 0 6px; }
+.tag-hole{ position:absolute; top: 18px; right: 18px; width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid var(--black); }
+.info-card p{ margin:0; color: rgba(17,17,17,0.78); }
+.info-card a{ text-decoration: underline; }
+.info-placeholder{ font-style: italic; color: rgba(17,17,17,0.5); }
+
+/* ---------- Fotos e divulgação (index.html) ---------- */
+.gallery-section{ padding: 8px 0 56px; }
+.gallery-grid{
+  display:grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px; margin-bottom: 26px;
+}
+.gallery-item{
+  aspect-ratio: 1 / 1;
+  background: var(--beige);
+  border: 1px dashed rgba(17,17,17,0.35);
+  border-radius: 4px;
+  display:flex; align-items:center; justify-content:center;
+  text-align:center; padding: 8px;
+  font-size: 0.78rem; color: rgba(17,17,17,0.5);
+}
+/* Quando houver fotos reais, troque cada .gallery-item por:
+   <img src="assets/foto-1.jpg" alt="Descrição da foto"> */
+
+/* ---------- Sobre o projeto (index.html) ---------- */
+.about-section{ padding: 8px 0 64px; }
+.about-inner{ max-width: 62ch; }
+.about-tag{
+  display:inline-block; margin-top: 16px; font-size: 0.78rem; letter-spacing: 0.04em;
+  color: rgba(17,17,17,0.55); border-top: 1px solid var(--line); padding-top: 12px;
+}
+
+/* ---------- Mapa (ajudar.html) ---------- */
+.map-frame{ width: 100%; height: 340px; border-radius: 4px; overflow: hidden; border: 1px solid var(--line); margin-bottom: 18px; }
+.map-actions{ display:flex; gap: 14px; flex-wrap: wrap; }
+.back-link{ display:inline-block; margin-top: 4px; }
+
+/* ---------- Rodapé (footer) ---------- */
+.site-footer{ border-top: 1px solid var(--line); padding: 40px 0 28px; }
+.footer-top{ display:flex; flex-wrap:wrap; justify-content: space-between; gap: 28px; margin-bottom: 24px; }
+.footer-brand .brand{ display:block; margin-bottom: 4px; }
+.footer-brand p{ margin:0; font-size: 0.85rem; color: rgba(17,17,17,0.6); }
+.footer-nav{ display:flex; flex-direction:column; gap: 8px; }
+.footer-nav a{ font-size: 0.9rem; text-decoration:none; }
+.footer-nav a:hover{ text-decoration:underline; }
+.footer-logos{ display:flex; gap: 14px; align-items:center; }
+.footer-logo-slot{
+  width: 96px; height: 56px; border: 1px dashed rgba(17,17,17,0.35); border-radius: 4px;
+  display:flex; align-items:center; justify-content:center; text-align:center;
+  font-size: 0.68rem; color: rgba(17,17,17,0.5); padding: 6px;
+}
+.footer-bottom{
+  border-top: 1px solid var(--line); padding-top: 18px;
+  font-size: 0.8rem; color: rgba(17,17,17,0.5);
+  display:flex; flex-wrap:wrap; justify-content: space-between; gap: 8px;
+}
+
+@media (max-width: 560px){
+  .cta-band{ padding: 36px 24px; }
+  .footer-logos{ flex-wrap: wrap; }
+}

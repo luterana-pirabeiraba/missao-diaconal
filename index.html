@@ -3,248 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brechó Solidário — Igreja Luterana Pirabeiraba</title>
+<title>Brechó Missão Diaconal — Igreja Luterana Pirabeiraba</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --white: #FFFFFF;
-  --black: #111111;
-  --beige: #EDE5D8;
-  --beige-deep: #DCC9A3;
-  --line: rgba(17,17,17,0.14);
-  --font-display: "Fraunces", serif;
-  --font-body: "Work Sans", sans-serif;
-}
-*{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; }
-body{
-  margin:0;
-  background: var(--white);
-  color: var(--black);
-  font-family: var(--font-body);
-  line-height: 1.5;
-}
-a{ color: inherit; }
-img{ max-width: 100%; display:block; }
-.wrap{ max-width: 960px; margin: 0 auto; padding: 0 24px; }
-:focus-visible{ outline: 2px solid var(--black); outline-offset: 3px; }
-
-/* ---------- Header ---------- */
-.site-header{ border-bottom: 1px solid var(--line); position: sticky; top:0; background: var(--white); z-index: 40; }
-.header-inner{
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 18px 24px;
-  position: relative;
-}
-.brand-block{ display:flex; align-items:baseline; gap: 12px; flex-wrap: wrap; }
-.brand{ font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; text-decoration:none; }
-.brand-sub{ font-size: 0.82rem; color: rgba(17,17,17,0.6); }
-
-.main-nav{ display:flex; align-items:center; gap: 28px; }
-.main-nav a{ font-size: 0.92rem; text-decoration:none; font-weight: 500; }
-.main-nav a:hover{ text-decoration: underline; }
-
-.header-logos{ display:flex; align-items:center; gap: 10px; }
-.logo-slot{
-  width: 34px; height: 34px;
-  border: 1px dashed rgba(17,17,17,0.35);
-  border-radius: 50%;
-  display:flex; align-items:center; justify-content:center;
-  font-size: 0.5rem;
-  line-height: 1.1;
-  text-align:center;
-  color: rgba(17,17,17,0.45);
-  padding: 2px;
-  flex-shrink: 0;
-}
-/* Quando as logos reais existirem, troque o .logo-slot por:
-   <img src="assets/logo-igreja.png" alt="Logo Igreja Luterana de Pirabeiraba">
-   <img src="assets/logo-missao-diaconal.png" alt="Logo Missão Diaconal"> */
-
-.menu-toggle{
-  display:none;
-  background:none; border: 1px solid var(--black); border-radius: 2px;
-  width: 40px; height: 36px;
-  cursor:pointer;
-  align-items:center; justify-content:center;
-}
-.menu-toggle span, .menu-toggle span::before, .menu-toggle span::after{
-  content:""; display:block; width: 18px; height: 2px; background: var(--black); position:relative;
-}
-.menu-toggle span::before{ position:absolute; top:-6px; }
-.menu-toggle span::after{ position:absolute; top:6px; }
-
-@media (max-width: 720px){
-  .main-nav{
-    position: absolute; top: 100%; left:0; right:0;
-    background: var(--white);
-    border-bottom: 1px solid var(--line);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    padding: 8px 24px 18px;
-    display:none;
-  }
-  .main-nav.open{ display:flex; }
-  .main-nav a{ padding: 10px 0; width:100%; }
-  .menu-toggle{ display:flex; }
-  .header-logos{ display:none; }
-}
-
-/* ---------- Hero ---------- */
-.hero{ background: var(--beige); padding: 72px 0 64px; }
-.hero-small{ padding: 48px 0 40px; }
-.hero-inner{ max-width: 640px; }
-.eyebrow{
-  font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
-  color: rgba(17,17,17,0.65); margin: 0 0 18px;
-}
-.hero h1{
-  font-family: var(--font-display); font-weight: 600;
-  font-size: clamp(2rem, 4.5vw, 2.9rem); line-height: 1.15; margin: 0 0 20px;
-}
-.hero-lede{ font-size: 1.05rem; max-width: 46ch; color: rgba(17,17,17,0.78); margin: 0 0 28px; }
-.hero-actions{ display:flex; gap: 14px; flex-wrap: wrap; }
-
-.btn{
-  display:inline-block; font-family: var(--font-body); font-weight: 600; font-size: 0.95rem;
-  padding: 13px 26px; border-radius: 2px; text-decoration:none; border: 1px solid var(--black);
-  transition: background 0.2s ease, color 0.2s ease; cursor:pointer;
-}
-.btn-primary{ background: var(--black); color: var(--white); }
-.btn-primary:hover{ background: #322f2b; }
-.btn-outline{ background: transparent; color: var(--black); }
-.btn-outline:hover{ background: var(--black); color: var(--white); }
-
-/* ---------- Section shared ---------- */
-.section-label{ font-family: var(--font-display); font-weight: 600; font-size: 1.6rem; margin: 0 0 6px; }
-.section-lede{ color: rgba(17,17,17,0.6); margin: 0 0 32px; }
-
-/* ---------- Vitrine ---------- */
-.vitrine-section{ padding: 64px 0 24px; }
-.vitrine-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 22px; }
-.product-card{
-  background: var(--white); border: 1px solid var(--line); border-radius: 6px;
-  padding: 0; overflow:hidden; display:flex; flex-direction:column;
-}
-.product-media{
-  background: var(--beige); aspect-ratio: 4 / 3;
-  display:flex; align-items:center; justify-content:center;
-  color: rgba(17,17,17,0.55);
-}
-.product-media svg{ width: 56px; height: 56px; }
-.product-body{ padding: 16px 18px 18px; position:relative; }
-.product-body::before{
-  content:""; position:absolute; left: 18px; top: -9px; width: 9px; height: 9px;
-  border-radius: 50%; border: 1.5px solid var(--black); background: var(--white);
-}
-.product-name{ font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; margin: 6px 0 2px; }
-.product-meta{ font-size: 0.85rem; color: rgba(17,17,17,0.65); margin: 0 0 10px; }
-.product-footer{ display:flex; align-items:center; justify-content: space-between; gap: 10px; }
-.product-price{ font-weight: 600; }
-.link-btn{
-  background:none; border:none; font: inherit; font-weight: 600; font-size: 0.85rem;
-  text-decoration: underline; cursor:pointer; padding: 4px 0; color: var(--black);
-}
-.vitrine-note{ font-size: 0.85rem; color: rgba(17,17,17,0.55); margin: 24px 0 0; }
-
-/* ---------- Modal ---------- */
-.modal-overlay{
-  position: fixed; inset: 0; background: rgba(17,17,17,0.5);
-  display:none; align-items:center; justify-content:center; padding: 20px; z-index: 100;
-}
-.modal-overlay.open{ display:flex; }
-.modal-box{
-  background: var(--white); border-radius: 6px; max-width: 380px; width:100%;
-  padding: 28px 26px; position:relative;
-}
-.modal-close{
-  position:absolute; top: 14px; right: 14px; background:none; border:none; font-size: 1.3rem;
-  line-height:1; cursor:pointer; color: var(--black);
-}
-.modal-box h3{ font-family: var(--font-display); font-size: 1.3rem; margin: 6px 0 4px; }
-.modal-box .product-meta{ margin-bottom: 14px; }
-.modal-contact{ font-size: 0.9rem; color: rgba(17,17,17,0.7); margin-top: 14px; }
-
-/* ---------- CTA band ---------- */
-.cta-band{ background: var(--beige); border-radius: 4px; margin: 56px 0; padding: 48px 40px; }
-.cta-band-inner{ max-width: 480px; }
-.cta-band h2{ font-family: var(--font-display); font-weight: 600; font-size: 1.6rem; margin: 0 0 10px; }
-.cta-band p{ color: rgba(17,17,17,0.75); margin: 0 0 22px; }
-
-/* ---------- Como ajudar (3 passos) ---------- */
-.steps-section{ padding: 24px 0 56px; }
-.steps-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 32px; margin-top: 28px; }
-.step-num{ font-family: var(--font-display); font-size: 2.4rem; font-weight: 600; color: var(--beige-deep); line-height:1; margin-bottom: 10px; }
-.step h3{ font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; margin: 0 0 6px; }
-.step p{ margin:0; color: rgba(17,17,17,0.72); font-size: 0.94rem; }
-
-/* ---------- Necessidades ---------- */
-.needs-section{ padding: 8px 0 56px; }
-.tags-grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 20px; }
-.tag-card{
-  position: relative; background: var(--white); border: 1px solid var(--line);
-  border-radius: 3px 12px 12px 3px; padding: 22px 20px 20px 30px;
-}
-.tag-card::before{
-  content:""; position:absolute; left: 12px; top: 22px; width: 8px; height: 8px;
-  border-radius: 50%; border: 1.5px solid var(--black); background: var(--white);
-}
-.tag-card::after{
-  content:""; position:absolute; left: 0; top: 0; bottom: 0; width: 1px;
-  background: repeating-linear-gradient(to bottom, var(--line) 0 4px, transparent 4px 8px);
-}
-.tag-urgent{
-  display:inline-block; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase;
-  color: var(--black); background: var(--beige-deep); padding: 3px 9px; border-radius: 2px; margin-bottom: 10px;
-}
-.tag-card h3{ font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; margin: 0 0 6px; }
-.tag-card p{ font-size: 0.9rem; color: rgba(17,17,17,0.72); margin: 0; }
-
-/* ---------- Sobre ---------- */
-.about-section{ padding: 8px 0 64px; }
-.about-inner{ max-width: 62ch; }
-.about-tag{
-  display:inline-block; margin-top: 16px; font-size: 0.78rem; letter-spacing: 0.04em;
-  color: rgba(17,17,17,0.55); border-top: 1px solid var(--line); padding-top: 12px;
-}
-
-/* ---------- Footer ---------- */
-.site-footer{ border-top: 1px solid var(--line); padding: 40px 0 28px; }
-.footer-top{ display:flex; flex-wrap:wrap; justify-content: space-between; gap: 28px; margin-bottom: 24px; }
-.footer-brand .brand{ display:block; margin-bottom: 4px; }
-.footer-brand p{ margin:0; font-size: 0.85rem; color: rgba(17,17,17,0.6); }
-.footer-nav{ display:flex; flex-direction:column; gap: 8px; }
-.footer-nav a{ font-size: 0.9rem; text-decoration:none; }
-.footer-nav a:hover{ text-decoration:underline; }
-.footer-logos{ display:flex; gap: 14px; align-items:center; }
-.footer-logo-slot{
-  width: 96px; height: 56px; border: 1px dashed rgba(17,17,17,0.35); border-radius: 4px;
-  display:flex; align-items:center; justify-content:center; text-align:center;
-  font-size: 0.68rem; color: rgba(17,17,17,0.5); padding: 6px;
-}
-.footer-bottom{
-  border-top: 1px solid var(--line); padding-top: 18px;
-  font-size: 0.8rem; color: rgba(17,17,17,0.5);
-  display:flex; flex-wrap:wrap; justify-content: space-between; gap: 8px;
-}
-@media (max-width: 560px){
-  .cta-band{ padding: 36px 24px; }
-  .footer-logos{ flex-wrap: wrap; }
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap header-inner">
     <div class="brand-block">
-      <a href="index.html" class="brand">Brechó Solidário</a>
+      <a href="index.html" class="brand">Brechó Missão Diaconal</a>
       <span class="brand-sub">Igreja Luterana Pirabeiraba · Missão Diaconal</span>
     </div>
 
@@ -252,6 +22,7 @@ img{ max-width: 100%; display:block; }
       <a href="index.html">Início</a>
       <a href="#vitrine">O que temos</a>
       <a href="ajudar.html">Quero ajudar</a>
+      <a href="#fotos">Fotos</a>
       <a href="#sobre">Sobre</a>
     </nav>
 
@@ -327,6 +98,18 @@ img{ max-width: 100%; display:block; }
     </div>
   </section>
 
+  <section class="gallery-section" id="fotos">
+    <h2 class="section-label">Fotos e divulgação</h2>
+    <p class="section-lede">Um pouco do que já rolou por aqui. Fotos reais serão adicionadas em breve.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">Foto em breve</div>
+      <div class="gallery-item">Foto em breve</div>
+      <div class="gallery-item">Foto em breve</div>
+      <div class="gallery-item">Foto em breve</div>
+    </div>
+    <a href="https://www.instagram.com/luteranapirabeiraba/" target="_blank" rel="noopener" class="btn btn-outline">Seguir no Instagram</a>
+  </section>
+
   <section class="about-section" id="sobre">
     <h2 class="section-label">Sobre o projeto</h2>
     <div class="about-inner">
@@ -340,13 +123,14 @@ img{ max-width: 100%; display:block; }
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <span class="brand">Brechó Solidário</span>
+        <span class="brand">Brechó Missão Diaconal</span>
         <p>Igreja Luterana de Pirabeiraba<br>Missão Diaconal</p>
       </div>
       <nav class="footer-nav" aria-label="Links do rodapé">
         <a href="index.html">Início</a>
         <a href="#vitrine">O que temos</a>
         <a href="ajudar.html">Quero ajudar</a>
+        <a href="#fotos">Fotos</a>
         <a href="#sobre">Sobre</a>
       </nav>
       <div class="footer-logos" aria-hidden="true">
@@ -371,112 +155,7 @@ img{ max-width: 100%; display:block; }
   </div>
 </div>
 
-<script>
-/* ---------- Menu mobile ---------- */
-const menuToggle = document.getElementById('menu-toggle');
-const mainNav = document.getElementById('main-nav');
-menuToggle.addEventListener('click', () => {
-  const isOpen = mainNav.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', String(isOpen));
-});
-mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  mainNav.classList.remove('open');
-  menuToggle.setAttribute('aria-expanded', 'false');
-}));
-
-/* ---------- Ícones da vitrine (SVG minimalistas) ---------- */
-const icones = {
-  camisa: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M17 8 L24 12 L31 8 L40 14 L35 20 L31 17 L31 40 L17 40 L17 17 L13 20 L8 14 Z"/></svg>',
-  camiseta: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M18 8 L24 11 L30 8 L39 15 L34 21 L30 18 L30 40 L18 40 L18 18 L14 21 L9 15 Z"/></svg>',
-  calca: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M15 8 H33 L34 40 L27 40 L24 20 L21 40 L14 40 Z"/></svg>',
-  vestido: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M19 8 H29 L31 16 L36 40 H12 L17 16 Z"/><path d="M19 8 L14 14 M29 8 L34 14"/></svg>',
-  jaqueta: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M17 8 L24 12 L31 8 L40 14 L35 20 L31 17 L31 40 L17 40 L17 17 L13 20 L8 14 Z"/><path d="M24 12 V40 M19 8 L21 40 M29 8 L27 40"/></svg>',
-  blusa: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M18 9 L24 13 L30 9 L38 15 L33 21 L30 18 L30 40 L18 40 L18 18 L15 21 L10 15 Z"/></svg>'
-};
-
-/* ---------- Vitrine ---------- */
-let produtosCache = [];
-
-async function carregarVitrine() {
-  const container = document.getElementById('vitrine-grid');
-  if (!container) return;
-  try {
-    const resposta = await fetch('produtos.json');
-    const dados = await resposta.json();
-    produtosCache = dados.itens || [];
-
-    if (produtosCache.length === 0) {
-      container.innerHTML = '<p>Nenhuma peça cadastrada no momento.</p>';
-      return;
-    }
-
-    container.innerHTML = produtosCache.map((item, i) => `
-      <div class="product-card">
-        <div class="product-media">${icones[item.icone] || icones.camiseta}</div>
-        <div class="product-body">
-          <h3 class="product-name">${item.nome}</h3>
-          <p class="product-meta">Tamanho ${item.tamanho} · ${item.estado}</p>
-          <div class="product-footer">
-            <span class="product-price">${item.preco}</span>
-            <button class="link-btn" data-index="${i}">Ver detalhes</button>
-          </div>
-        </div>
-      </div>
-    `).join('');
-
-    container.querySelectorAll('.link-btn').forEach(btn => {
-      btn.addEventListener('click', () => abrirModal(produtosCache[Number(btn.dataset.index)]));
-    });
-
-  } catch (erro) {
-    container.innerHTML = '<p>Não foi possível carregar a vitrine agora. Se você abriu este arquivo diretamente (duplo clique), isso é esperado — funciona normalmente quando o site está publicado (ex: GitHub Pages).</p>';
-    console.error('Erro ao carregar produtos.json:', erro);
-  }
-}
-
-const modalOverlay = document.getElementById('modal-overlay');
-function abrirModal(item) {
-  document.getElementById('modal-title').textContent = item.nome;
-  document.getElementById('modal-meta').textContent = `Tamanho ${item.tamanho} · ${item.estado}`;
-  document.getElementById('modal-price').textContent = item.preco;
-  modalOverlay.classList.add('open');
-}
-document.getElementById('modal-close').addEventListener('click', () => modalOverlay.classList.remove('open'));
-modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) modalOverlay.classList.remove('open'); });
-
-/* ---------- Necessidades ---------- */
-async function carregarNecessidades() {
-  const container = document.getElementById('needs-list');
-  if (!container) return;
-
-  try {
-    const resposta = await fetch('necessidades.json');
-    const dados = await resposta.json();
-
-    if (!dados.itens || dados.itens.length === 0) {
-      container.innerHTML = '<p>Nenhuma necessidade cadastrada no momento.</p>';
-      return;
-    }
-
-    container.innerHTML = dados.itens.map(item => `
-      <div class="tag-card">
-        ${item.urgente ? '<span class="tag-urgent">Urgente</span>' : ''}
-        <h3>${item.titulo}</h3>
-        <p>${item.descricao}</p>
-      </div>
-    `).join('');
-
-  } catch (erro) {
-    container.innerHTML = '<p>Não foi possível carregar a lista agora. Se você abriu este arquivo diretamente (duplo clique), isso é esperado — funciona normalmente quando o site está publicado (ex: GitHub Pages).</p>';
-    console.error('Erro ao carregar necessidades.json:', erro);
-  }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  carregarVitrine();
-  carregarNecessidades();
-});
-</script>
-
+<script src="js/main.js" defer></script>
+<script src="js/vitrine.js" defer></script>
 </body>
 </html>
