@@ -2,7 +2,6 @@
 
 Link do site: https://luterana-pirabeiraba.github.io/missao-diaconal/
 
-
 ## LICENSE
 
 © 2026 luterana-pirabeiraba. All rights reserved.
