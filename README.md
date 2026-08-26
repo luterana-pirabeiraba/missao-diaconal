@@ -24,6 +24,8 @@ Para atualizar os produtos do brechó ou a lista de necessidades, editar diretam
 - **produtos.json**: Cadastro e alteração dos itens exibidos na página do brechó.
 - **necessidades**.json: Cadastro de itens que a diaconia precisa no momento.
 
+Para editar peças e necessidades do site, confira o [Guia](./GUIA.md).
+
 ## 🛠️ Arquitetura Técnica
 
 O site ainda é **estático** (isto é, HTML5, CSS3 e JavaScript puro), construído sem dependência de frameworks ou sistemas de backend complexos, garantindo melhor performance e facilidade de manutenção.
