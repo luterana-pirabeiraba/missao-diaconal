@@ -38,7 +38,11 @@ async function carregarVitrine() {
 
     container.innerHTML = produtosCache.map((item, i) => `
       <div class="product-card">
-        <div class="product-media">${icones[item.icone] || icones.camiseta}</div>
+        <div class="product-media">${
+          item.imagem
+            ? `<img src="${escapeHTML(item.imagem)}" alt="${escapeHTML(item.nome)}">`
+            : (icones[item.icone] || icones.camiseta)
+        }</div>
         <div class="product-body">
           <h3 class="product-name">${escapeHTML(item.nome)}</h3>
           <p class="product-meta">Tamanho ${escapeHTML(item.tamanho)} · ${escapeHTML(item.estado)}</p>
