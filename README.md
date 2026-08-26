@@ -49,11 +49,15 @@ missao-diaconal/
 │   │   ├── background_igreja.png
 │   │   ├── logo_diaconiaIECLB.png
 │   │   ├── logo_IECLB.png
-│   │   ├── logo_igreja.png
-│   │   └── logo_missao_diaconal.png
+│   │   ├── logo_igreja_branco.png
+│   │   ├── logo_igreja_preto.png
+│   │   ├── logo_missao_diaconal1.png
+│   │   ├── logo_missao_diaconal2.png
+│   │   └── logo_missao_diaconal3.png
 │   │
 │   └── missao_diaconal/
 │       └── cestas_basicas.jpeg
+│       └── curso_culinaria_2025.jpeg
 │
 ├── produtos.json
 └── necessidades.json

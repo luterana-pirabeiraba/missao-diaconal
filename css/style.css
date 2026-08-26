@@ -183,8 +183,8 @@ img{ max-width: 100%; display:block; }
 /* ---------- Fotos e divulgação (index.html) ---------- */
 .gallery-section{ padding: 8px 0 56px; }
 .gallery-grid{
-  display:grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 14px; margin-bottom: 26px;
+  display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px; margin-bottom: 26px;
 }
 .gallery-item{
   aspect-ratio: 1 / 1;
@@ -194,6 +194,13 @@ img{ max-width: 100%; display:block; }
   display:flex; align-items:center; justify-content:center;
   text-align:center; padding: 8px;
   font-size: 0.78rem; color: rgba(17,17,17,0.5);
+  overflow: hidden;
+}
+.gallery-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
 }
 /* Quando houver fotos reais, troque cada .gallery-item por:
    <img src="assets/foto-1.jpg" alt="Descrição da foto"> */
