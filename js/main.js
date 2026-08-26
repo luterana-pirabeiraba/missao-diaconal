@@ -1,5 +1,5 @@
 /* ===========================================================
-   MAIN.JS — usado nas DUAS páginas (index.html e ajudar.html)
+   MAIN.JS — usado nas DUAS páginas (index.html e ajudar.html).
    Cuida do menu mobile (hambúrguer) e da lista de necessidades.
    =========================================================== */
 

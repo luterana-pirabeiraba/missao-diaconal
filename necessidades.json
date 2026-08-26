@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "2026-08-23",
+  "atualizadoEm": "2026-08-26",
   "itens": [
     {
       "titulo": "Roupas de inverno",
@@ -8,7 +8,7 @@
     },
     {
       "titulo": "Sapatos e calçados",
-      "descricao": "Todos os tamanhos são bem-vindos, especialmente numeração infantil.",
+      "descricao": "Todos os tamanhos são bem-vindos, especialmente numeração para mulheres.",
       "urgente": false
     },
     {
@@ -17,8 +17,8 @@
       "urgente": false
     },
     {
-      "titulo": "Voluntários para triagem",
-      "descricao": "Ajuda para organizar e separar as doações nas terças-feiras.",
+      "titulo": "Voluntários",
+      "descricao": "Ajuda para a missão diaconal nas terças-feiras.",
       "urgente": true
     }
   ]

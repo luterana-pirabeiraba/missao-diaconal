@@ -2,8 +2,8 @@
    VITRINE.JS — usado só no index.html
    Cuida da seção "O que temos" (cartões de roupas) e do
    modal que abre ao clicar em "Ver detalhes".
-   Para editar as peças, tamanhos e preços, edite o arquivo
-   produtos.json — não é preciso mexer aqui.
+   Para editar as peças, tamanhos e preços, editar o arquivo
+   produtos.json, não é preciso mexer aqui.
    =========================================================== */
 
 /* Ícones simples em SVG para cada tipo de peça (não usa fotos) */
