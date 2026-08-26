@@ -18,17 +18,9 @@ O site visa apresentar o propósito da Missão Diaconal à comunidade, divulgar 
 
 ---
 
-## 🏛️ Estrutura de Páginas
-
-* `index.html`: Página inicial com o propósito da instituição, horários de cultos, versículo bíblico, galeria/fotos e links de navegação.
-* `brecho.html`: Vitrine do Brechó Solidário. Exibe peças (mock) com preço, tamanho e estado de conservação a partir de dados dinâmicos (sem sistema de carrinho ou checkout).
-* `ajudar.html`: Página institucional contendo endereço completo, mapa interativo, links para WhatsApp e Instagram, horário de atendimento e lista de necessidades atuais.
-
----
-
 ## 🛠️ Arquitetura Técnica
 
-O site é **estático** (HTML5, CSS3 e JavaScript puro), construído sem dependência de frameworks ou sistemas de backend complexos, garantindo alta performance e facilidade de manutenção por pessoas leigas.
+O site é **estático** (HTML5, CSS3 e JavaScript puro), construído sem dependência de frameworks ou sistemas de backend complexos, garantindo alta performance e facilidade de manutenção.
 
 ### Organização de Pastas e Arquivos
 ```text
