@@ -3,6 +3,22 @@
    Cuida do menu mobile (hambúrguer) e da lista de necessidades.
    =========================================================== */
 
+/* ---------- Config da fonte de dados das necessidades ----------
+   Hoje aponta para um arquivo JSON estático. Quando houver backend,
+   basta trocar esta URL pelo endpoint da API (ex.: "/api/necessidades")
+   — o resto do código (fetch + montagem dos cartões) não precisa mudar. */
+const NECESSIDADES_ENDPOINT = 'necessidades.json';
+
+/* ---------- Escapa texto antes de inserir no HTML ----------
+   Protege contra HTML/código indevido em textos vindos de fora
+   (hoje o JSON, futuramente um backend/painel admin).
+   Também é usada pelo vitrine.js, que carrega depois deste arquivo. */
+function escapeHTML(texto) {
+  const div = document.createElement('div');
+  div.textContent = String(texto ?? '');
+  return div.innerHTML;
+}
+
 /* ---------- Menu mobile (abre/fecha o menu no celular) ---------- */
 function iniciarMenuMobile() {
   const menuToggle = document.getElementById('menu-toggle');
@@ -28,7 +44,7 @@ async function carregarNecessidades() {
   if (!container) return;
 
   try {
-    const resposta = await fetch('necessidades.json');
+    const resposta = await fetch(NECESSIDADES_ENDPOINT);
     const dados = await resposta.json();
 
     if (!dados.itens || dados.itens.length === 0) {
@@ -39,8 +55,8 @@ async function carregarNecessidades() {
     container.innerHTML = dados.itens.map(item => `
       <div class="tag-card">
         ${item.urgente ? '<span class="tag-urgent">Urgente</span>' : ''}
-        <h3>${item.titulo}</h3>
-        <p>${item.descricao}</p>
+        <h3>${escapeHTML(item.titulo)}</h3>
+        <p>${escapeHTML(item.descricao)}</p>
       </div>
     `).join('');
 

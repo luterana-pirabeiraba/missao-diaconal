@@ -16,6 +16,10 @@ const icones = {
   blusa: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M18 9 L24 13 L30 9 L38 15 L33 21 L30 18 L30 40 L18 40 L18 18 L15 21 L10 15 Z"/></svg>'
 };
 
+/* Config da fonte de dados da vitrine — trocar pela URL da API quando
+   houver backend (mesma ideia do NECESSIDADES_ENDPOINT em main.js). */
+const PRODUTOS_ENDPOINT = 'produtos.json';
+
 let produtosCache = [];
 
 async function carregarVitrine() {
@@ -23,7 +27,7 @@ async function carregarVitrine() {
   if (!container) return;
 
   try {
-    const resposta = await fetch('produtos.json');
+    const resposta = await fetch(PRODUTOS_ENDPOINT);
     const dados = await resposta.json();
     produtosCache = dados.itens || [];
 
@@ -36,10 +40,10 @@ async function carregarVitrine() {
       <div class="product-card">
         <div class="product-media">${icones[item.icone] || icones.camiseta}</div>
         <div class="product-body">
-          <h3 class="product-name">${item.nome}</h3>
-          <p class="product-meta">Tamanho ${item.tamanho} · ${item.estado}</p>
+          <h3 class="product-name">${escapeHTML(item.nome)}</h3>
+          <p class="product-meta">Tamanho ${escapeHTML(item.tamanho)} · ${escapeHTML(item.estado)}</p>
           <div class="product-footer">
-            <span class="product-price">${item.preco}</span>
+            <span class="product-price">${escapeHTML(item.preco)}</span>
             <button class="link-btn" data-index="${i}">Ver detalhes</button>
           </div>
         </div>
