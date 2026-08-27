@@ -34,17 +34,12 @@ O site ainda é **estático** (isto é, HTML5, CSS3 e JavaScript puro), constru�
 ```text
 missao-diaconal/
 │
-├── index.html
-├── brecho.html
-├── ajudar.html
-├── README.md
-│
 ├── css/
 │   └── style.css
 │
-├── js/
-│   ├── main.js
-│   └── vitrine.js
+├── data/
+│   ├── necessidades.json
+│   └── produtos.json
 │
 ├── img/
 │   ├── logos/
@@ -55,14 +50,21 @@ missao-diaconal/
 │   │   ├── logo_igreja_preto.png
 │   │   ├── logo_missao_diaconal1.png
 │   │   ├── logo_missao_diaconal2.png
-│   │   └── logo_missao_diaconal3.png
+│   │   ├── logo_missao_diaconal3.png
+│   │   └── logo_missao_diaconal4.png
 │   │
 │   └── missao_diaconal/
-│       └── cestas_basicas.jpeg
+│       ├── cestas_basicas.jpeg
 │       └── curso_culinaria_2025.jpeg
 │
-├── produtos.json
-└── necessidades.json
+├── js/
+│   ├── main.js
+│   └── vitrine.js
+│
+├── index.html
+├── brecho.html
+├── ajudar.html
+└── README.md
 ```
 
 ## LICENSE
