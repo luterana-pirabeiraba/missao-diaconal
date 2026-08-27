@@ -11,11 +11,6 @@ O projeto foi desenvolvido para ser publicado via **GitHub Pages** e pode ser ac
 
 O site visa apresentar o propósito da Missão Diaconal à comunidade, divulgar as suas ações, prestar informações de contato/localização e permitir que a equipe mantenha a lista de necessidades atualizada de forma simples.
 
-### Conteúdos:
-* **Cultos Abertos:** Todas as terças-feiras, das 15h às 16h, abertos a toda a comunidade.
-* **PGM (Pequenos Grupos de Multiplicação):** 10 minutos de reflexão em pequeno grupo após os cultos.
-* **Ação Social:** Distribuição eventual de cestas básicas em datas específicas.
-
 ---
 
 ## ⚙️ Atualização de Conteúdo
@@ -24,11 +19,11 @@ Para atualizar os produtos do brechó ou a lista de necessidades, editar diretam
 - **produtos.json**: Cadastro e alteração dos itens exibidos na página do brechó.
 - **necessidades**.json: Cadastro de itens que a diaconia precisa no momento.
 
-Para editar peças e necessidades do site, confira o [Guia](./GUIA.md).
+Para uma instrução mais detalhada, confirir o [Guia](./GUIA.md).
 
 ## 🛠️ Arquitetura Técnica
 
-O site ainda é **estático** (isto é, HTML5, CSS3 e JavaScript puro), construído sem dependência de frameworks ou sistemas de backend complexos, garantindo melhor performance e facilidade de manutenção.
+O site ainda é **estático** (isto é, HTML5, CSS3 e JavaScript puro), construído sem dependência de frameworks ou sistemas de backend complexos, possuindo assim, melhor performance e facilidade de manutenção.
 
 ### Organização de Pastas e Arquivos
 ```text
@@ -67,7 +62,7 @@ missao-diaconal/
 └── README.md
 ```
 
-## LICENSE
+## 📜 LICENSE
 
 © 2026 luterana-pirabeiraba. All rights reserved.
 This repository is public for GitHub Pages deployment purposes. No permission is granted to copy, modify, distribute, or reuse the source code without prior written permission.

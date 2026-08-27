@@ -1,6 +1,6 @@
 # Como editar o conteúdo do site (arquivos `.json`)
 
-O conteúdo dinâmico do site é controlado por dois arquivos JSON. Não é necessário mexer em HTML, CSS ou JS, só editar esses arquivos que estão na pasta [data](./data) e depois fazer commit.
+O conteúdo dinâmico do site é controlado por dois arquivos JSON. Não é necessário mexer em HTML, CSS ou JS, só é necessário editar os arquivos que estão na pasta [data](./data) e depois fazer commit.
 
 ### `produtos.json` — peças do brechó (exibidas em `brecho.html`)
 
