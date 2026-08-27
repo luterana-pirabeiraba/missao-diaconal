@@ -4,10 +4,10 @@
    =========================================================== */
 
 /* ---------- Config da fonte de dados das necessidades ----------
-   Hoje aponta para um arquivo JSON estático. Quando houver backend,
-   basta trocar esta URL pelo endpoint da API (ex.: "/api/necessidades")
-   — o resto do código (fetch + montagem dos cartões) não precisa mudar. */
-const NECESSIDADES_ENDPOINT = 'necessidades.json';
+  Hoje aponta para um arquivo JSON estático. Quando houver backend,
+  basta trocar esta URL pelo endpoint da API (ex.: "/api/necessidades"),
+  o resto do código (fetch + montagem dos cartões) não precisa mudar. */
+const NECESSIDADES_ENDPOINT = 'data/necessidades.json';
 
 /* ---------- Escapa texto antes de inserir no HTML ----------
    Protege contra HTML/código indevido em textos vindos de fora

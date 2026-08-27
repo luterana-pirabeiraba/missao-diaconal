@@ -138,13 +138,13 @@ img{ max-width: 100%; display:block; }
 .modal-box .product-meta{ margin-bottom: 14px; }
 .modal-contact{ font-size: 0.9rem; color: rgba(17,17,17,0.7); margin-top: 14px; }
 
-/* ---------- Faixa de destaque "Quer ajudar?" (index.html) ---------- */
+/* ---------- Faixa de destaque "Quer ajudar?" ---------- */
 .cta-band{ background: var(--beige); border-radius: 4px; margin: 56px 0; padding: 48px 40px; }
 .cta-band-inner{ max-width: 480px; }
 .cta-band h2{ font-family: var(--font-display); font-weight: 600; font-size: 1.6rem; margin: 0 0 10px; }
 .cta-band p{ color: rgba(17,17,17,0.75); margin: 0 0 22px; }
 
-/* ---------- "Como posso ajudar?" em 3 passos (index.html) ---------- */
+/* ---------- "Como posso ajudar?" em 3 passos ---------- */
 .steps-section{ padding: 24px 0 56px; }
 .steps-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 32px; margin-top: 28px; }
 .step-num{ font-family: var(--font-display); font-size: 2.4rem; font-weight: 600; color: var(--beige-deep); line-height:1; margin-bottom: 10px; }
@@ -203,8 +203,6 @@ img{ max-width: 100%; display:block; }
   object-fit: cover;
   border-radius: 4px;
 }
-/* Quando houver fotos reais, troque cada .gallery-item por:
-   <img src="assets/foto-1.jpg" alt="Descrição da foto"> */
 
 /* ---------- Sobre o projeto (index.html) ---------- */
 .about-section{ padding: 8px 0 64px; }
@@ -214,7 +212,7 @@ img{ max-width: 100%; display:block; }
   color: rgba(17,17,17,0.55); border-top: 1px solid var(--line); padding-top: 12px;
 }
 
-/* ---------- Versículo (index.html) ---------- */
+/* ---------- Versículo ---------- */
 .verse-section{ padding: 0 0 56px; }
 .verse-block{
   background: var(--beige); border-radius: 4px; padding: 40px 36px; max-width: 640px;
