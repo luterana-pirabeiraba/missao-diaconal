@@ -25,7 +25,8 @@
   --white: #0D0D0D;
   --black: #FFFDFE;
   --beige: #211219;
-  --beige-deep: #F26DB6;
+  --beige-deep: #D90769;
+  --tertiary: #D90769;
   --ink-rgb: 255,253,254;
   --btn-primary-hover: #DAD8D8;
 }
@@ -373,10 +374,10 @@ a.brand-sub:hover{ text-decoration: underline; }
   transition: background 0.35s ease, box-shadow 0.2s ease;
 }
 .theme-toggle:hover{ box-shadow: inset 0 0 0 1px rgba(255,253,254,0.12), 0 0 0 4px rgba(242,109,182,0.22); }
-.theme-toggle:focus-visible{ outline: 2px solid #F26DB6; outline-offset: 3px; }
+.theme-toggle:focus-visible{ outline: 2px solid var(--tertiary); outline-offset: 3px; }
 
 [data-theme="dark"] .theme-toggle{
-  background: linear-gradient(135deg, #F26DB6 0%, #D90769 100%);
+  background: linear-gradient(135deg, #D90769 0%, #D90769 100%);
 }
 
 .theme-toggle .toggle-knob{
@@ -396,6 +397,6 @@ a.brand-sub:hover{ text-decoration: underline; }
 
 .theme-toggle svg{ width: 13px; height: 13px; }
 .theme-toggle .icon-sun{ display:block; color: #8C0436; }
-.theme-toggle .icon-moon{ display:none; color: #F26DB6; }
+.theme-toggle .icon-moon{ display:none; color: var(--tertiary); }
 [data-theme="dark"] .theme-toggle .icon-sun{ display:none; }
 [data-theme="dark"] .theme-toggle .icon-moon{ display:block; }
