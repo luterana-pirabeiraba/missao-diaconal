@@ -16,8 +16,8 @@ const icones = {
   blusa: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M18 9 L24 13 L30 9 L38 15 L33 21 L30 18 L30 40 L18 40 L18 18 L15 21 L10 15 Z"/></svg>'
 };
 
-/* Config da fonte de dados da vitrine, trocar pela URL da API quando
-   houver backend (mesma ideia do NECESSIDADES_ENDPOINT em main.js). */
+/* Config da fonte de dados da vitrine, trocar pela URL da API quando 
+houver backend (mesma ideia do NECESSIDADES_ENDPOINT em main.js). */
 const PRODUTOS_ENDPOINT = 'data/produtos.json';
 
 let produtosCache = [];

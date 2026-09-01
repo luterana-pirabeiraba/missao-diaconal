@@ -39,7 +39,7 @@ missao-diaconal/
 ├── img/
 │   ├── logos/
 │   │   ├── background_igreja.png
-│   │   ├── logo_diaconiaIECLB.png
+│   │   ├── logo_diaconia_IECLB.png
 │   │   ├── logo_IECLB.png
 │   │   ├── logo_igreja_branco.png
 │   │   ├── logo_igreja_preto.png

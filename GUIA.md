@@ -53,3 +53,4 @@ O conteúdo dinâmico do site é controlado por dois arquivos JSON. Não é nece
 - Ambos os arquivos usam a chave `"itens"` como uma lista, pode ter quantos itens quiser, ou remover todos (a página mostra uma mensagem de "nada cadastrado no momento").
 - Se um arquivo tiver erro de formatação (JSON inválido), a seção correspondente mostra uma mensagem de erro amigável em vez de quebrar a página.
 - Fotos referenciadas em `imagem` precisam existir de fato na pasta do projeto (ex.: `img/brecho/`), caminho incorreto resulta em imagem quebrada.
+- Dúvidas gerais entrar em contato com o editor da página.

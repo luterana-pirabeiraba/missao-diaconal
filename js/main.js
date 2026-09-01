@@ -19,7 +19,7 @@ function escapeHTML(texto) {
   return div.innerHTML;
 }
 
-/* ---------- Menu mobile (abre/fecha o menu no celular) ---------- */
+/* ---------- Menu mobile (abre / fecha o menu no celular) ---------- */
 function iniciarMenuMobile() {
   const menuToggle = document.getElementById('menu-toggle');
   const mainNav = document.getElementById('main-nav');
