@@ -56,9 +56,10 @@ missao-diaconal/
 │   ├── main.js
 │   └── vitrine.js
 │
-├── index.html
-├── brecho.html
 ├── ajudar.html
+├── brecho.html
+├── index.html
+├── GUIA.md
 └── README.md
 ```
 
