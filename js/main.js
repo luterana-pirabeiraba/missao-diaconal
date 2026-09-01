@@ -66,7 +66,29 @@ async function carregarNecessidades() {
   }
 }
 
+/* ---------- Modo escuro/noite ----------
+   O tema já é aplicado "cedo" por um script inline no <head> de cada
+   página (evita o flash de tela clara). Aqui só cuidamos do clique
+   no botão e de salvar a escolha do usuário. */
+function iniciarThemeToggle() {
+  const botao = document.getElementById('theme-toggle');
+  if (!botao) return;
+  const root = document.documentElement;
+
+  botao.addEventListener('click', () => {
+    const estaEscuro = root.getAttribute('data-theme') === 'dark';
+    if (estaEscuro) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('md-theme', 'light');
+    } else {
+      root.setAttribute('data-theme', 'dark');
+      localStorage.setItem('md-theme', 'dark');
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   iniciarMenuMobile();
+  iniciarThemeToggle();
   carregarNecessidades();
 });
