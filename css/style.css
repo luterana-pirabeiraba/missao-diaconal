@@ -256,21 +256,52 @@ a.brand-sub:hover{ text-decoration: underline; }
 
 /* ---------- Rodapé (footer) ---------- */
 .site-footer{ border-top: 1px solid var(--line); padding: 40px 0 28px; }
-.footer-top{ display:flex; flex-wrap:wrap; justify-content: space-between; align-items: flex-start; gap: 28px; margin-bottom: 24px; }
-.footer-brand-col{ display:flex; flex-direction: column; gap: 18px; min-width: 0; }
+
+.footer-top{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.footer-brand{
+  display:flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
 .footer-brand .brand{ display:block; margin-bottom: 4px; }
 .footer-brand p{ margin:0; font-size: 0.85rem; color: rgba(17,17,17,0.6); }
-.footer-nav{ display:flex; flex-direction:column; gap: 8px; flex-shrink: 0; }
-.footer-nav a{ font-size: 0.9rem; text-decoration:none; }
-.footer-nav a:hover{ text-decoration:underline; }
-.footer-logos{ display:flex; gap: 10px; align-items:center; }
+
+.footer-logos{
+  display:flex;
+  gap: 10px;
+  align-items:center;
+  flex-wrap: wrap;
+  min-width: 0;
+  order: 2;
+}
 .footer-logo{
-  width: 120px; height: 120px;
+  width: 90px; height: 90px;
   border-radius: 50%;
   object-fit: cover;
   background: var(--white);
   flex-shrink: 0;
 }
+
+.footer-nav{
+  display:flex;
+  flex-direction:column;
+  gap: 8px;
+  flex-shrink: 0;
+  min-width: 0;
+  order: 3;
+}
+.footer-nav a{ font-size: 0.9rem; text-decoration:none; }
+.footer-nav a:hover{ text-decoration:underline; }
+
 .footer-bottom{
   border-top: 1px solid var(--line); padding-top: 18px;
   font-size: 0.8rem; color: rgba(17,17,17,0.5);
@@ -279,7 +310,27 @@ a.brand-sub:hover{ text-decoration: underline; }
 
 @media (max-width: 640px){
   .cta-band{ padding: 36px 24px; }
-  .footer-top{ flex-wrap: nowrap; }
-  .footer-brand-col{ flex-direction: row; align-items: center; gap: 12px; }
-  .footer-logo{ width: 80px; height: 80px; }
+
+  .footer-top{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .footer-logos{
+    order: 2;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .footer-nav{
+    order: 3;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+  }
+  .footer-logo{ width: 100px; height: 100px; }
+}
+
+@media (max-width: 400px){
+  .footer-logo{ width: 75px; height: 75px; }
 }
