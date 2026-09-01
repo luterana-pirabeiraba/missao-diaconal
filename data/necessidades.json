@@ -1,9 +1,19 @@
 {
-  "atualizadoEm": "2026-08-31",
+  "atualizadoEm": "2026-09-01",
   "itens": [
     {
       "titulo": "Roupas de inverno",
       "descricao": "Casacos, blusas de frio e cobertores em bom estado, para adulto e infantil.",
+      "urgente": true
+    },
+    {
+      "titulo": "Cama, Colchão e Guarda Roupa",
+      "descricao": "Em boas condições de uso.",
+      "urgente": true
+    },
+    {
+      "titulo": "Voluntários",
+      "descricao": "Ajuda para a missão diaconal nas terças-feiras.",
       "urgente": true
     },
     {
@@ -15,11 +25,6 @@
       "titulo": "Louças e utensílios de cozinha",
       "descricao": "Panelas, pratos, copos e talheres em condições de uso.",
       "urgente": false
-    },
-    {
-      "titulo": "Voluntários",
-      "descricao": "Ajuda para a missão diaconal nas terças-feiras.",
-      "urgente": true
     }
   ]
 }
