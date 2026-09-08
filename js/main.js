@@ -74,15 +74,18 @@ function iniciarThemeToggle() {
   const botao = document.getElementById('theme-toggle');
   if (!botao) return;
   const root = document.documentElement;
+  const metaTheme = document.querySelector('meta[name="theme-color"]');
 
   botao.addEventListener('click', () => {
     const estaEscuro = root.getAttribute('data-theme') === 'dark';
     if (estaEscuro) {
       root.removeAttribute('data-theme');
       localStorage.setItem('md-theme', 'light');
+      metaTheme?.setAttribute('content', '#ffffff');
     } else {
       root.setAttribute('data-theme', 'dark');
       localStorage.setItem('md-theme', 'dark');
+      metaTheme?.setAttribute('content', '#1a1a1a');
     }
   });
 }

@@ -6,9 +6,13 @@
 (function(){
   var t = localStorage.getItem('md-theme');
   if(!t){ t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
-  if(t === 'dark'){ document.documentElement.setAttribute('data-theme','dark'); }
+  if(t === 'dark'){
+    document.documentElement.setAttribute('data-theme','dark');
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#1a1a1a');
+  }
 })();
 </script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quero ajudar — Missão Diaconal</title>
@@ -133,7 +137,6 @@
     </div>
     <div class="map-actions">
       <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=R.+Olavo+Bilac,+368,+Pirabeiraba,+Joinville+-+SC" target="_blank" rel="noopener">Como chegar</a>
-      <a href="index.html" class="btn btn-outline back-link">← Voltar para o início</a>
     </div>
   </section>
 
