@@ -169,8 +169,12 @@ a.brand-sub:hover{ text-decoration: underline; }
 
 /* ---------- "Como posso ajudar?" em 3 passos ---------- */
 .steps-section{ padding: 24px 0 56px; }
-.steps-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 32px; margin-top: 28px; align-items: start; }
-.step{ display:flex; flex-direction:column; height: 100%; }
+.steps-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 24px; margin-top: 28px; align-items: stretch; }
+.step{
+  display:flex; flex-direction:column; height: 100%;
+  background: var(--white); border: 1px solid var(--line); border-radius: 4px;
+  padding: 26px 24px;
+}
 .step-num{ font-family: var(--font-display); font-size: 2.4rem; font-weight: 600; color: var(--tertiary); line-height:1; margin-bottom: 10px; }
 .step h3{ font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; margin: 0 0 6px; }
 .step p{ margin:0; color: rgba(var(--ink-rgb),0.72); font-size: 0.94rem; }
@@ -229,7 +233,7 @@ a.brand-sub:hover{ text-decoration: underline; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0;
+  border-radius: 8px;
   transition: transform 0.5s ease;
 }
 .gallery-item:hover img{
@@ -238,7 +242,7 @@ a.brand-sub:hover{ text-decoration: underline; }
 
 /* ---------- Sobre o projeto (index.html) ---------- */
 .about-section{ padding: 8px 0 64px; }
-.about-inner{ max-width: 62ch; }
+.about-inner{ max-width: none; }
 .about-tag{
   display:inline-block; margin-top: 16px; font-size: 0.78rem; letter-spacing: 0.04em;
   color: rgba(var(--ink-rgb),0.55); border-top: 1px solid var(--line); padding-top: 12px;
@@ -247,11 +251,12 @@ a.brand-sub:hover{ text-decoration: underline; }
 /* ---------- Versículo ---------- */
 .verse-section{ padding: 0 0 56px; }
 .verse-block{
-  background: var(--tertiary); border-radius: 4px; padding: 40px 36px; max-width: 640px;
+  background: var(--tertiary); border-radius: 4px; padding: 40px 36px;
 }
 .verse-text{
   font-family: var(--font-display); font-style: italic; font-weight: 500;
   font-size: 1.25rem; line-height: 1.5; margin: 0 0 14px; color: var(--black);
+  max-width: 640px;
 }
 .verse-ref{ font-size: 0.85rem; color: rgba(var(--ink-rgb),0.6); margin:0; }
 
