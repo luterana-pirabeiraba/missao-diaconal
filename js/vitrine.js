@@ -1,5 +1,5 @@
 /* ===========================================================
-   VITRINE.JS — usado só no index.html
+   VITRINE.JS — usado só na brecho.html
    Cuida da seção "O que temos" (cartões de roupas) e do
    modal que abre ao clicar em "Ver detalhes".
    Para editar as peças, tamanhos e preços, editar o arquivo
@@ -55,7 +55,7 @@ async function carregarVitrine() {
     `).join('');
 
     container.querySelectorAll('.link-btn').forEach(btn => {
-      btn.addEventListener('click', () => abrirModal(produtosCache[Number(btn.dataset.index)]));
+      btn.addEventListener('click', () => abrirModal(produtosCache[Number(btn.dataset.index)], btn));
     });
 
   } catch (erro) {
@@ -64,13 +64,29 @@ async function carregarVitrine() {
   }
 }
 
-function abrirModal(item) {
+/* Guarda qual elemento estava com foco antes de abrir o modal,
+   para devolver o foco a ele quando o modal for fechado
+   (importante para quem navega só com teclado ou leitor de tela). */
+let elementoFocoAnterior = null;
+
+function abrirModal(item, botaoOrigem) {
   const modalOverlay = document.getElementById('modal-overlay');
   if (!modalOverlay) return;
+  elementoFocoAnterior = botaoOrigem || document.activeElement;
+
   document.getElementById('modal-title').textContent = item.nome;
   document.getElementById('modal-meta').textContent = `Tamanho ${item.tamanho} · ${item.estado}`;
   document.getElementById('modal-price').textContent = item.preco;
   modalOverlay.classList.add('open');
+
+  document.getElementById('modal-close').focus();
+}
+
+function fecharModal() {
+  const modalOverlay = document.getElementById('modal-overlay');
+  if (!modalOverlay) return;
+  modalOverlay.classList.remove('open');
+  elementoFocoAnterior?.focus();
 }
 
 function iniciarModal() {
@@ -78,9 +94,16 @@ function iniciarModal() {
   const modalClose = document.getElementById('modal-close');
   if (!modalOverlay || !modalClose) return;
 
-  modalClose.addEventListener('click', () => modalOverlay.classList.remove('open'));
+  modalClose.addEventListener('click', fecharModal);
   modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) modalOverlay.classList.remove('open');
+    if (e.target === modalOverlay) fecharModal();
+  });
+
+  /* Fecha com a tecla Esc, só quando o modal está aberto */
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalOverlay.classList.contains('open')) {
+      fecharModal();
+    }
   });
 }
 

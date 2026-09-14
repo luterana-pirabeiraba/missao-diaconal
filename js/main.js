@@ -1,6 +1,8 @@
 /* ===========================================================
-   MAIN.JS — usado nas DUAS páginas (index.html e ajudar.html).
-   Cuida do menu mobile (hambúrguer) e da lista de necessidades.
+   MAIN.JS — usado nas TRÊS páginas (index.html, ajudar.html e
+   brecho.html). Cuida do menu mobile (hambúrguer), do modo
+   escuro/noite e da lista de necessidades (esta última só
+   aparece de fato na ajudar.html, que é a única com #needs-list).
    =========================================================== */
 
 /* ---------- Config da fonte de dados das necessidades ----------
@@ -37,8 +39,10 @@ function iniciarMenuMobile() {
 }
 
 /* ---------- Lista "O que está fazendo falta" / "O que estamos precisando" ----------
+   Só roda de fato na ajudar.html (é lá que existe o elemento #needs-list;
+   nas outras páginas a função simplesmente retorna sem fazer nada).
    Lê o arquivo necessidades.json e monta os cartões na tela.
-   Para editar as necessidades, editar o arquivo necessidades.json!Não é preciso mexer aqui. */
+   Para editar as necessidades, editar o arquivo necessidades.json! Não é preciso mexer aqui. */
 async function carregarNecessidades() {
   const container = document.getElementById('needs-list');
   if (!container) return;
