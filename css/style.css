@@ -163,7 +163,7 @@ a.brand-sub:hover{ text-decoration: underline; }
 
 /* ---------- Faixa de destaque "Quer ajudar?" ---------- */
 .cta-band{ background: var(--tertiary); border-radius: 4px; margin: 56px 0; padding: 48px 40px; }
-.cta-band-inner{ max-width: 480px; }
+.cta-band-inner{ max-width: none; }
 .cta-band h2{ font-family: var(--font-display); font-weight: 600; font-size: 1.6rem; margin: 0 0 10px; }
 .cta-band p{ color: rgba(var(--ink-rgb),0.75); margin: 0 0 22px; }
 
@@ -256,7 +256,7 @@ a.brand-sub:hover{ text-decoration: underline; }
 .verse-text{
   font-family: var(--font-display); font-style: italic; font-weight: 500;
   font-size: 1.25rem; line-height: 1.5; margin: 0 0 14px; color: var(--black);
-  max-width: 640px;
+  max-width: none;
 }
 .verse-ref{ font-size: 0.85rem; color: rgba(var(--ink-rgb),0.6); margin:0; }
 
