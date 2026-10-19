@@ -2,8 +2,8 @@
   "atualizadoEm": "2026-09-20",
   "itens": [
     {
-      "titulo": "Roupas de inverno",
-      "descricao": "Casacos, blusas de frio e cobertores em bom estado, para adulto e infantil.",
+      "titulo": "Fogão",
+      "descricao": "Qualquer tipo em bom estado",
       "urgente": true
     },
     {
@@ -23,7 +23,7 @@
     },
     {
       "titulo": "Louças e utensílios de cozinha",
-      "descricao": "Panelas, pratos, copos e talheres em condições de uso.",
+      "descricao": "Panelas, pratos, copos e talheres em boas condições de uso.",
       "urgente": false
     }
   ]
