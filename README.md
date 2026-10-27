@@ -2,7 +2,7 @@
 
 Repositório do site institucional da **Missão Diaconal**, pertencente à Igreja Luterana de Pirabeiraba.
 
-O projeto foi desenvolvido para ser publicado via **GitHub Pages** e pode ser acessado em:  
+O projeto pode ser acessado em:  
 👉 [https://luterana-pirabeiraba.github.io/missao-diaconal/](https://luterana-pirabeiraba.github.io/missao-diaconal/)
 
 ---

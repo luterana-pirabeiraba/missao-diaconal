@@ -1,8 +1,8 @@
 # Como editar o conteúdo do site (arquivos `.json`)
 
-O conteúdo dinâmico do site é controlado por dois arquivos JSON. Não é necessário mexer em HTML, CSS ou JS, só é necessário editar os arquivos que estão na pasta [data](./data) e depois fazer commit.
+O conteúdo dinâmico do site é controlado por dois arquivos JSON. Não é necessário mexer em HTML, CSS ou JavaScript, só é necessário editar os arquivos que estão na pasta [data](./data) e depois fazer o commit.
 
-### `produtos.json` — peças do brechó (exibidas em `brecho.html`)
+### EXEMPLO: `produtos.json` — peças do brechó (exibidas em `brecho.html`)
 
 ```json
 {
@@ -28,7 +28,7 @@ O conteúdo dinâmico do site é controlado por dois arquivos JSON. Não é nece
 | `icone` | sim | Ícone padrão exibido caso não haja foto. Valores aceitos: `camisa`, `camiseta`, `calca`, `vestido`, `jaqueta`, `blusa` |
 | `imagem` | não | Caminho de uma foto real (`.jpg`/`.png`) da peça. Se preenchido, substitui o ícone |
 
-### `necessidades.json` — lista "O que estamos precisando" (exibida em `ajudar.html`)
+### EXEMPLO: `necessidades.json` — lista "O que estamos precisando" (exibida em `ajudar.html`)
 
 ```json
 {
