@@ -1,6 +1,11 @@
 {
-  "atualizadoEm": "2026-10-27",
+  "atualizadoEm": "2026-11-02",
   "itens": [
+    {
+      "titulo": "Frauda Geriátrica",
+      "descricao": "Novas",
+      "urgente": true
+    },
     {
       "titulo": "Fogão",
       "descricao": "Qualquer tipo em bom estado",
